@@ -14,7 +14,7 @@
 <body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-on-background/80 backdrop-blur-xl shadow-sm transition-all duration-300">
-<nav class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row justify-between items-start md:items-center h-auto md:h-16">
+<nav class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-start md:items-center h-auto md:h-16">
 <div class="w-full flex items-center justify-between py-4 md:py-0">
 <div class="font-headline-md text-headline-md font-bold text-on-background dark:text-white">
                 Kettii
@@ -41,6 +41,28 @@
 </nav>
 </header>
 <main class="flex-grow pt-24 pb-section-gap">
+<div class="resume-layout max-w-container-max mx-auto px-gutter">
+    <aside class="resume-sidebar glass-card p-6">
+        <div class="text-center">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgH02CehN6avreX8U-i_HLvV0rCyh5kgSMNA1TWzWNcJb7WrWFQukkyU15pSvy3pbb2IRNeaSVX0966Q_TdEbQ9aUT8YmLvCZY-VpyU1WDLdesjDjIRqNWTY2huvVBrhi31jRQU_IwdLzfaZnO9VPAElxe2hdR_Z6WaXHzNElBoiHm4yxUJ-gKixufrSl6V1RFb5cUsl9Ou89TR000_1hTzWrNBfCu_i68ZQiRXsxoU0FvT2sF-1fr" alt="portrait" style="width:120px;height:150px;object-fit:cover;border-radius:8px;display:block;margin:0 auto 12px;"/>
+            <h2 class="font-headline-md text-headline-md mb-1">Kettii</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-3">International Industrial Service Management</p>
+        </div>
+        <div class="mb-4">
+            <h4 class="font-label-mono text-label-mono mb-2">Contact</h4>
+            <p class="font-body-sm text-body-sm">Email: <a href="#">you@example.com</a></p>
+            <p class="font-body-sm text-body-sm">LinkedIn: <a href="#">profile</a></p>
+        </div>
+        <div>
+            <h4 class="font-label-mono text-label-mono mb-2">Skills</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-chip">Strategic Planning</span>
+                <span class="skill-chip">Service Design</span>
+                <span class="skill-chip">Research</span>
+            </div>
+        </div>
+    </aside>
+    <div class="resume-main">
 <!-- Hero Section -->
 <section id="home" class="max-w-container-max mx-auto px-gutter mb-section-gap pt-12 md:pt-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -184,10 +206,13 @@
 </div>
 </div>
 </section>
+ </section>
+     </div>
+ </div>
 </main>
 <!-- Footer -->
 <footer id="contact" class="bg-surface-container-lowest dark:bg-on-background w-full py-12">
-<div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
 <div class="font-headline-sm text-headline-sm font-semibold text-on-background dark:text-white">
                 Kettii
             </div>

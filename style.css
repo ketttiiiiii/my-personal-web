@@ -12,18 +12,19 @@
     box-shadow: 0 2px 10px rgba(0, 106, 97, 0.1);
 }
 .glass-panel {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--color-surface-variant, #e0e3e5);
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    background: rgba(6, 15, 28, 0.55);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6);
 }
 .card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 .mobile-menu {
-    background-color: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+    background-color: rgba(2,8,20,0.85);
+    box-shadow: 0 20px 60px rgba(2,6,23,0.7);
+    border-top: 1px solid rgba(255,255,255,0.03);
 }
 :root{
     --bg-deep: #031425;
@@ -74,4 +75,115 @@ nav a, nav .font-headline-md, nav .font-headline-sm{
     background: rgba(255,255,255,0.05);
     color: var(--muted);
     border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Page container and gutters to avoid overly-wide layout */
+.max-w-container-max{
+    width:100%;
+    max-width:760px; /* tighter resume column width */
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+.px-gutter{
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+@media (min-width:1280px){
+    .max-w-container-max{ max-width:1100px; }
+}
+
+/* Section separators and improved vertical rhythm */
+section{
+    padding-top:2.5rem;
+    padding-bottom:2.5rem;
+}
+
+section + section{
+    border-top:1px solid rgba(255,255,255,0.04);
+    margin-top:2rem;
+    padding-top:2.5rem;
+}
+
+/* Improve headings contrast and spacing */
+h1, h2, h3, h4{
+    color: var(--muted);
+}
+
+.font-display-hero-mobile{
+    line-height:1.05;
+    max-width:720px;
+}
+
+/* Make hero image slightly smaller on small screens */
+@media (max-width:768px){
+    .aspect-[4/5]{
+        aspect-ratio: 3/4;
+    }
+}
+
+/* Resume layout grid */
+.resume-layout{
+    display:block;
+}
+
+@media (min-width:99999px){
+    /* disabled: keep single-column layout for normal screens */
+    .resume-layout{
+        display:grid;
+        grid-template-columns: 260px 1fr;
+        gap:2rem;
+        align-items:start;
+    }
+    .resume-sidebar{ position:sticky; top:96px; align-self:start; }
+}
+
+/* Ensure single-column layout on most screens */
+.resume-layout{ display:block; }
+
+.resume-sidebar a{ color:var(--muted); }
+.resume-sidebar .skill-chip{ margin-bottom:6px; }
+.resume-main{ }
+
+/* Ensure commonly used surface classes show proper contrast on dark background */
+.bg-surface-container, .bg-surface-bright, .bg-surface-container-low, .bg-surface-container-lowest{
+    background: rgba(6,15,28,0.45) !important;
+    border: 1px solid rgba(255,255,255,0.03) !important;
+    color: var(--muted) !important;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.5);
+}
+
+/* Force text color for utility text classes that may be undefined */
+.text-on-surface-variant, .text-on-surface, .text-on-background, .text-on-surface-dark, .text-secondary-fixed, .text-on-surface-variant{
+    color: var(--muted) !important;
+}
+
+/* Default paragraph and link styles for resume clarity */
+p, li, span, div, a{
+    color: var(--muted) !important;
+}
+
+a{ text-decoration:none; }
+a:hover{ text-decoration:underline; color:#e6f7ff; }
+
+/* More compact card style for resume feel */
+.glass-card{
+    padding:1rem;
+    border-radius:12px;
+}
+
+/* Make headings more prominent and consistent */
+h1{ font-size:2rem; margin-bottom:0.5rem; }
+h2{ font-size:1.25rem; margin-bottom:0.5rem; }
+
+/* Reduce large image impact to keep resume compact */
+.relative img{ max-height:420px; object-position:center top; }
+
+/* Reduce oversized images on smaller screens */
+.aspect-[4/5], .relative img{
+    max-width:100%;
+    height:auto;
 }
