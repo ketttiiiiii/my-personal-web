@@ -15,27 +15,35 @@
 <body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-on-background/80 backdrop-blur-xl shadow-sm transition-all duration-300">
-<nav class="max-w-7xl mx-auto px-gutter flex justify-between items-center h-16">
+<nav class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row justify-between items-start md:items-center h-auto md:h-16">
+<div class="w-full flex items-center justify-between py-4 md:py-0">
 <div class="font-headline-md text-headline-md font-bold text-on-background dark:text-white">
                 Kettii
             </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#">Home</a>
-<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 hover:opacity-80 transition-all duration-300" href="#">About</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#">Experience</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#">Portfolio</a>
-</div>
-<a class="hidden md:inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-2 rounded font-headline-md text-[16px] hover:opacity-90 transition-opacity" href="#">
-                Contact
-            </a>
-<button class="md:hidden text-on-surface">
+<button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" type="button" class="md:hidden text-on-surface focus:outline-none">
 <span class="material-symbols-outlined">menu</span>
 </button>
+</div>
+<div id="desktop-nav" class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#home">Home</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 hover:opacity-80 transition-all duration-300" href="#about">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#experience">Experience</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#portfolio">Portfolio</a>
+</div>
+<div id="mobile-menu" class="hidden md:hidden mobile-menu w-full bg-white/95 dark:bg-on-background/95 backdrop-blur-xl shadow-lg border-t border-surface-container/50">
+<div class="px-gutter pb-6 pt-4 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#home">Home</a>
+<a class="font-body-md text-body-md text-on-surface-dark hover:text-secondary transition-colors" href="#about">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#experience">Experience</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#portfolio">Portfolio</a>
+<a class="inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-2 rounded font-headline-md text-[16px] hover:opacity-90 transition-opacity" href="#contact">Contact</a>
+</div>
+</div>
 </nav>
 </header>
 <main class="flex-grow pt-24 pb-section-gap">
 <!-- Hero Section -->
-<section class="max-w-container-max mx-auto px-gutter mb-section-gap pt-12 md:pt-24">
+<section id="home" class="max-w-container-max mx-auto px-gutter mb-section-gap pt-12 md:pt-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 <div class="lg:col-span-7 space-y-6">
 <span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Academic Journey</span>
@@ -54,7 +62,7 @@
 </div>
 </section>
 <!-- The Story / Academic Focus (Bento Grid) -->
-<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<section id="about" class="max-w-container-max mx-auto px-gutter mb-section-gap">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Main Narrative -->
 <div class="md:col-span-2 glass-card rounded-2xl p-8 md:p-12">
@@ -77,12 +85,12 @@
 </div>
 <!-- Quick Stats / Core Focus -->
 <div class="md:col-span-1 space-y-6">
-<div class="bg-surface-container-low rounded-2xl p-8 border border-surface-variant h-[calc(50%-12px)] flex flex-col justify-center">
+<div class="bg-surface-container-low rounded-2xl p-8 border border-surface-variant h-auto md:h-[calc(50%-12px)] flex flex-col justify-center">
 <span class="material-symbols-outlined text-secondary mb-3" style="font-size: 28px;">public</span>
 <h4 class="font-headline-md text-headline-md text-on-background mb-2">Global Perspective</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Analyzing service frameworks across diverse international markets.</p>
 </div>
-<div class="bg-surface-bright rounded-2xl p-8 border border-surface-variant h-[calc(50%-12px)] flex flex-col justify-center relative overflow-hidden">
+<div class="bg-surface-bright rounded-2xl p-8 border border-surface-variant h-auto md:h-[calc(50%-12px)] flex flex-col justify-center relative overflow-hidden">
 <div class="absolute -right-4 -bottom-4 opacity-10">
 <span class="material-symbols-outlined" style="font-size: 120px;">account_tree</span>
 </div>
@@ -94,7 +102,7 @@
 </div>
 </section>
 <!-- Academic Interests -->
-<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<section id="experience" class="max-w-container-max mx-auto px-gutter mb-section-gap">
 <div class="text-center mb-12">
 <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Research &amp; Interests</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Key areas of academic exploration within the service management domain.</p>
@@ -135,7 +143,7 @@
 </div>
 </section>
 <!-- Skills Area -->
-<section class="max-w-container-max mx-auto px-gutter">
+<section id="portfolio" class="max-w-container-max mx-auto px-gutter">
 <div class="bg-surface-container rounded-3xl p-8 md:p-16 border border-surface-variant">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 <div>
@@ -182,7 +190,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest dark:bg-on-background w-full py-12">
+<footer id="contact" class="bg-surface-container-lowest dark:bg-on-background w-full py-12">
 <div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
 <div class="font-headline-sm text-headline-sm font-semibold text-on-background dark:text-white">
                 Kettii

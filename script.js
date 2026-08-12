@@ -87,3 +87,28 @@ window.tailwind.config = {
         }
     }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (!menuButton || !mobileMenu) return;
+
+    const toggleMenu = () => {
+        const isOpen = mobileMenu.classList.toggle('hidden') === false;
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.innerHTML = isOpen
+            ? '<span class="material-symbols-outlined">close</span>'
+            : '<span class="material-symbols-outlined">menu</span>';
+    };
+
+    menuButton.addEventListener('click', toggleMenu);
+
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+        });
+    });
+});
