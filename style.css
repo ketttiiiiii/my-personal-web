@@ -187,3 +187,14 @@ h2{ font-size:1.25rem; margin-bottom:0.5rem; }
     max-width:100%;
     height:auto;
 }
+
+/* Neutralize accidental white-bg utility classes (from prior Tailwind utilities) */
+[class*="bg-white"]{
+    background-color: transparent !important;
+    border-color: rgba(255,255,255,0.03) !important;
+}
+
+/* Ensure any lingering utility text classes are readable */
+.text-on-background, .text-on-surface, .text-on-surface-variant, .text-on-surface-dark{
+    color: var(--muted) !important;
+}
