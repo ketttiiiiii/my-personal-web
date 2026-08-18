@@ -182,6 +182,59 @@ h2{ font-size:1.25rem; margin-bottom:0.5rem; }
 /* Reduce large image impact to keep resume compact */
 .relative img{ max-height:420px; object-position:center top; }
 
+/* === Professional polish: typography, header, cards === */
+:root{
+    --accent: #60a5fa;
+    --muted-2: #a9d6ff;
+}
+
+body{
+    font-family: 'Hanken Grotesk', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-size:16px;
+    line-height:1.55;
+    color:var(--muted);
+}
+
+/* Headings */
+h1{ font-family: 'Hanken Grotesk', 'Inter', sans-serif; font-size:2.2rem; letter-spacing:-0.5px; color:var(--muted); margin-bottom:0.5rem; }
+h2{ font-size:1.25rem; color:var(--muted); margin-bottom:0.25rem; }
+h3{ font-size:1.05rem; color:var(--muted); }
+
+/* Compact header */
+header nav{ padding-top:0.75rem; padding-bottom:0.75rem; }
+header .font-headline-md{ font-weight:700; }
+nav a{ padding:0.4rem 0.6rem; border-radius:6px; }
+nav a:hover{ background: rgba(255,255,255,0.02); color:var(--accent) !important; }
+
+/* Buttons / primary CTA */
+.inline-flex.items-center.justify-center.bg-secondary{
+    background: linear-gradient(90deg,var(--accent), #4fd1c5) !important;
+    color: #001217 !important;
+    box-shadow: 0 6px 18px rgba(8,20,35,0.5);
+}
+
+/* Glass cards more subtle for resume */
+.glass-card{ background: rgba(6,15,28,0.55); border:1px solid rgba(255,255,255,0.03); box-shadow: none; }
+.glass-card p{ color:var(--muted); }
+
+/* Skill chips refined */
+.skill-chip{ background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); color:var(--muted-2); padding:6px 10px; font-size:13px; }
+
+/* Content spacing */
+.max-w-container-max{ padding-left:1.25rem; padding-right:1.25rem; }
+section{ padding-top:1.75rem; padding-bottom:1.75rem; }
+
+/* Make images tidy */
+.glass-card img{ border-radius:8px; }
+
+/* Print / PDF friendly */
+@media print{
+    body{ background: #fff; color:#111; }
+    .glass-card, .bg-surface-container, .resume-sidebar{ background: #fff !important; box-shadow:none !important; color:#111 !important; border: none !important; }
+    nav, .mobile-menu, footer{ display:none !important; }
+    .max-w-container-max{ max-width:650px !important; }
+}
+
 /* Reduce oversized images on smaller screens */
 .aspect-[4/5], .relative img{
     max-width:100%;
