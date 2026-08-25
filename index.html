@@ -1,235 +1,61 @@
-<!-- Design System -->
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Kettii - International Industrial Service Management</title>
-<script src="script.js"></script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kettii's portfolio in international industrial service management.">
+  <title>Kettii | Service Management & Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 backdrop-blur-xl shadow-sm transition-all duration-300">
-<nav class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-start md:items-center h-auto md:h-16">
-<div class="w-full flex items-center justify-between py-4 md:py-0">
-<div class="font-headline-md text-headline-md font-bold text-on-background dark:text-white">
-                Kettii
-            </div>
-<button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" type="button" class="md:hidden text-on-surface focus:outline-none">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<div id="desktop-nav" class="flex items-center gap-8">
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#home">Home</a>
-<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 hover:opacity-80 transition-all duration-300" href="#about">About</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#experience">Experience</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors hover:opacity-80 transition-all duration-300" href="#portfolio">Portfolio</a>
-</div>
-<div id="mobile-menu" class="hidden md:hidden mobile-menu w-full backdrop-blur-xl shadow-lg border-t border-surface-container/50">
-<div class="px-gutter pb-6 pt-4 flex flex-col gap-4">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#home">Home</a>
-<a class="font-body-md text-body-md text-on-surface-dark hover:text-secondary transition-colors" href="#about">About</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#experience">Experience</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#portfolio">Portfolio</a>
-<a class="inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-2 rounded font-headline-md text-[16px] hover:opacity-90 transition-opacity" href="#contact">Contact</a>
-</div>
-</div>
-</nav>
-</header>
-<main class="flex-grow pt-24 pb-section-gap">
-<div class="resume-layout max-w-container-max mx-auto px-gutter">
-    <aside class="resume-sidebar glass-card p-6">
-        <div class="text-center">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgH02CehN6avreX8U-i_HLvV0rCyh5kgSMNA1TWzWNcJb7WrWFQukkyU15pSvy3pbb2IRNeaSVX0966Q_TdEbQ9aUT8YmLvCZY-VpyU1WDLdesjDjIRqNWTY2huvVBrhi31jRQU_IwdLzfaZnO9VPAElxe2hdR_Z6WaXHzNElBoiHm4yxUJ-gKixufrSl6V1RFb5cUsl9Ou89TR000_1hTzWrNBfCu_i68ZQiRXsxoU0FvT2sF-1fr" alt="portrait" style="width:120px;height:150px;object-fit:cover;border-radius:8px;display:block;margin:0 auto 12px;"/>
-            <h2 class="font-headline-md text-headline-md mb-1">Kettii</h2>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-3">International Industrial Service Management</p>
-        </div>
-        <div class="mb-4">
-            <h4 class="font-label-mono text-label-mono mb-2">Profile</h4>
-            <p class="font-body-sm text-body-sm">School: <strong>TCU University</strong></p>
-            <p class="font-body-sm text-body-sm">Location: <strong>Malawi</strong></p>
-            <p class="font-body-sm text-body-sm">Age: <strong>22</strong></p>
-            <p class="font-body-sm text-body-sm">Status: <strong>Volunteer</strong></p>
-            <p class="font-body-sm text-body-sm">Email: <a href="mailto:mt.school@gmail.com">mt.school@gmail.com</a></p>
-            <p class="font-body-sm text-body-sm">LinkedIn: <a href="#">profile</a></p>
-        </div>
-        <div>
-            <h4 class="font-label-mono text-label-mono mb-2">Skills</h4>
-            <div class="flex flex-wrap gap-2">
-                <span class="skill-chip">Strategic Planning</span>
-                <span class="skill-chip">Service Design</span>
-                <span class="skill-chip">Research</span>
-            </div>
-        </div>
-    </aside>
-    <div class="resume-main">
-<!-- Hero Section -->
-<section id="home" class="max-w-container-max mx-auto px-gutter mb-section-gap pt-12 md:pt-24">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-<div class="lg:col-span-7 space-y-6">
-<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Academic Journey</span>
-<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-on-background">
-                        Bridging Theory &amp; <br/><span class="text-secondary">Service Innovation</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                        A deep dive into the intersection of modern management principles and the evolving landscape of global industrial services.
-                    </p>
-</div>
-<div class="lg:col-span-5 relative">
-<div class="rounded-2xl overflow-hidden glass-card p-2 flex items-center justify-start" style="min-height:0;">
-    <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#082033,#033449);box-shadow:0 8px 20px rgba(2,6,23,0.6);"></div>
-        <p class="font-body-sm text-body-sm text-on-surface-variant m-0">Portrait removed</p>
-    </div>
-</div>
-<!-- The Story / Academic Focus (Bento Grid) -->
-<section id="about" class="max-w-container-max mx-auto px-gutter mb-section-gap">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Main Narrative -->
-<div class="md:col-span-2 glass-card rounded-2xl p-8 md:p-12">
-<div class="flex items-center gap-4 mb-6">
-<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">school</span>
-<h2 class="font-headline-lg text-headline-lg text-on-background">Tzu Chi University</h2>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Department of International Industrial Service Management</h3>
-<div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-<p>
-                            My academic pursuit is rooted in understanding how service ecosystems drive modern economies. At Tzu Chi University, the curriculum transcends traditional business management by embedding a profound sense of social responsibility into industrial practices.
-                        </p>
-<p>
-                            The core of my studies focuses on the optimization of service delivery networks, cross-cultural management strategies, and the integration of sustainable practices within large-scale operations. I am particularly fascinated by how organizational behavior and strategic planning can transform a standard service into an exceptional, value-driven experience.
-                        </p>
-<p>
-                            Through rigorous coursework in quality management, service design, and international business strategy, I have developed a robust framework for analyzing and improving complex operational structures.
-                        </p>
-</div>
-</div>
-<!-- Quick Stats / Core Focus -->
-<div class="md:col-span-1 space-y-6">
-<div class="bg-surface-container-low rounded-2xl p-8 border border-surface-variant h-auto md:h-[calc(50%-12px)] flex flex-col justify-center">
-<span class="material-symbols-outlined text-secondary mb-3" style="font-size: 28px;">public</span>
-<h4 class="font-headline-md text-headline-md text-on-background mb-2">Global Perspective</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Analyzing service frameworks across diverse international markets.</p>
-</div>
-<div class="bg-surface-bright rounded-2xl p-8 border border-surface-variant h-auto md:h-[calc(50%-12px)] flex flex-col justify-center relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 opacity-10">
-<span class="material-symbols-outlined" style="font-size: 120px;">account_tree</span>
-</div>
-<span class="material-symbols-outlined text-secondary mb-3" style="font-size: 28px;">analytics</span>
-<h4 class="font-headline-md text-headline-md text-on-background mb-2">Systems Thinking</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Approaching management challenges through holistic process optimization.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Academic Interests -->
-<section id="experience" class="max-w-container-max mx-auto px-gutter mb-section-gap">
-<div class="text-center mb-12">
-<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Research &amp; Interests</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Key areas of academic exploration within the service management domain.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Interest 1 -->
-<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-<span class="material-symbols-outlined text-secondary">handshake</span>
-</div>
-<h3 class="font-headline-md text-[20px] text-on-background mb-2">Service Quality Management</h3>
-<p class="font-body-md text-[14px] text-on-surface-variant">Studying methodologies for measuring, maintaining, and elevating service standards in multinational organizations.</p>
-</div>
-<!-- Interest 2 -->
-<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-<span class="material-symbols-outlined text-secondary">diversity_3</span>
-</div>
-<h3 class="font-headline-md text-[20px] text-on-background mb-2">Cross-Cultural Leadership</h3>
-<p class="font-body-md text-[14px] text-on-surface-variant">Exploring how diverse cultural backgrounds influence team dynamics and organizational behavior in global settings.</p>
-</div>
-<!-- Interest 3 -->
-<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-<span class="material-symbols-outlined text-secondary">eco</span>
-</div>
-<h3 class="font-headline-md text-[20px] text-on-background mb-2">Sustainable Operations</h3>
-<p class="font-body-md text-[14px] text-on-surface-variant">Integrating environmental and social governance (ESG) principles into core business models and supply chains.</p>
-</div>
-<!-- Interest 4 -->
-<div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-<span class="material-symbols-outlined text-secondary">psychology</span>
-</div>
-<h3 class="font-headline-md text-[20px] text-on-background mb-2">Consumer Behavior</h3>
-<p class="font-body-md text-[14px] text-on-surface-variant">Analyzing decision-making processes and psychological factors that drive modern service consumption.</p>
-</div>
-</div>
-</section>
-<!-- Skills Area -->
-<section id="portfolio" class="max-w-container-max mx-auto px-gutter">
-<div class="bg-surface-container rounded-3xl p-8 md:p-16 border border-surface-variant">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Management Expertise</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                            A curated set of competencies developed through academic rigor, case studies, and practical project execution within the industrial service sector.
-                        </p>
-<div class="space-y-6">
-<div>
-<h4 class="font-label-mono text-label-mono text-on-surface mb-3 uppercase">Strategic Planning</h4>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Market Analysis</span>
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Resource Allocation</span>
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Risk Assessment</span>
-</div>
-</div>
-<div>
-<h4 class="font-label-mono text-label-mono text-on-surface mb-3 uppercase">Service Design</h4>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Customer Journey Mapping</span>
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Process Optimization</span>
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Quality Assurance</span>
-</div>
-</div>
-<div>
-<h4 class="font-label-mono text-label-mono text-on-surface mb-3 uppercase">Communication &amp; Leadership</h4>
-<div class="flex flex-wrap gap-2">
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Cross-functional Collaboration</span>
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Conflict Resolution</span>
-<span class="skill-chip bg-surface-container px-4 py-2 rounded-full font-label-mono text-[13px] text-on-surface-variant">Presentation Skills</span>
-</div>
-</div>
-</div>
-</div>
-<div class="relative h-full min-h-[260px] rounded-2xl overflow-hidden bg-gradient-to-t from-[#022c46] to-transparent flex items-end p-8">
-    <div class="flex items-center gap-4">
-        <span class="material-symbols-outlined text-secondary-fixed" style="font-size: 28px;">lightbulb</span>
-        <p class="font-headline-md text-[18px] text-on-background">"True management is not just about organizing resources; it is about harmonizing human potential with operational efficiency."</p>
-    </div>
-</div>
-</div>
-</div>
-</section>
- </section>
-     </div>
- </div>
-</main>
-<!-- Footer -->
-<footer id="contact" class="bg-surface-container-lowest dark:bg-on-background w-full py-12">
-<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
-<div class="font-headline-sm text-headline-sm font-semibold text-on-background dark:text-white">
-                Kettii
-            </div>
-<p class="font-label-mono text-label-mono text-on-surface-variant text-center md:text-left">
-                © 2024 Kettii. International Industrial Service Management student at Tzu Chi University.
-            </p>
-<div class="flex items-center gap-6">
-<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary transition-colors hover:translate-y-[-2px] transition-transform focus-within:ring-2 focus-within:ring-secondary" href="#">LinkedIn</a>
-<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary transition-colors hover:translate-y-[-2px] transition-transform focus-within:ring-2 focus-within:ring-secondary" href="#">GitHub</a>
-<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary transition-colors hover:translate-y-[-2px] transition-transform focus-within:ring-2 focus-within:ring-secondary" href="#">Email</a>
-</div>
-</div>
-</footer>
-</body></html>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#home">KETTII<span>.</span></a>
+      <button class="menu-toggle" id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="material-symbols-outlined">menu</span></button>
+      <div class="nav-links" id="site-menu">
+        <a href="#about">About</a><a href="#work">Work</a><a href="#testimonials">Testimonials</a>
+        <a class="nav-contact" href="#contact">Let's talk <span class="material-symbols-outlined">north_east</span></a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero shell" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">International industrial service management <span>/</span> Malawi</p>
+        <h1>I turn complex systems into <em>clear direction.</em></h1>
+        <p class="hero-subtitle">I am Kettii, a service management student curious about the people, processes, and ideas that make organizations work better.</p>
+        <a class="button button-dark" href="#work">View my work <span class="material-symbols-outlined">arrow_downward</span></a>
+      </div>
+      <div class="portrait-placeholder"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="University student holding books on campus"><strong>01</strong></div>
+    </section>
+    <section class="about shell section-rule" id="about">
+      <div class="section-label"><span>01</span><span>About me</span></div>
+      <div class="about-grid">
+        <div class="story"><h2>Useful work starts with <em>understanding.</em></h2><p>My academic journey at Tzu Chi University sits at the intersection of business, service design, and social responsibility. I look at the spaces between strategy and reality: how teams collaborate, how customers experience systems, and how small improvements can create lasting value.</p><p>With a global perspective and a practical mindset, I am building the tools to help organizations become more thoughtful, resilient, and human.</p></div>
+        <div><p class="mini-label">Quick facts</p><div class="facts-grid"><div><strong>22</strong><span>Years young</span></div><div><strong>TCU</strong><span>University</span></div><div><strong>3+</strong><span>Core disciplines</span></div><div><strong>MW</strong><span>Based in Malawi</span></div></div></div>
+      </div>
+    </section>
+    <section class="work shell section-rule" id="work">
+      <div class="section-heading"><div><div class="section-label"><span>02</span><span>Selected work</span></div><h2>Ideas, made <em>practical.</em></h2></div><p>A selection of academic explorations and real-world projects shaped by curiosity.</p></div>
+      <div class="project-grid">
+        <article class="project project-teal"><div class="project-art"><span class="art-word">FLOW</span><span class="art-index">01</span></div><div class="project-info"><span>Service design</span><h3>Mapping the customer journey</h3><a href="#contact" aria-label="Ask about Mapping the customer journey"><span class="material-symbols-outlined">arrow_outward</span></a></div></article>
+        <article class="project project-orange"><div class="project-art"><span class="art-word">SHIFT</span><span class="art-index">02</span></div><div class="project-info"><span>Operations</span><h3>Small moves, better systems</h3><a href="#contact" aria-label="Ask about Small moves, better systems"><span class="material-symbols-outlined">arrow_outward</span></a></div></article>
+        <article class="project project-lilac"><div class="project-art"><span class="art-word">LOCAL</span><span class="art-index">03</span></div><div class="project-info"><span>Market research</span><h3>Designing for local context</h3><a href="#contact" aria-label="Ask about Designing for local context"><span class="material-symbols-outlined">arrow_outward</span></a></div></article>
+        <article class="project project-yellow"><div class="project-art"><span class="art-word">PEOPLE</span><span class="art-index">04</span></div><div class="project-info"><span>Leadership</span><h3>Building stronger teams</h3><a href="#contact" aria-label="Ask about Building stronger teams"><span class="material-symbols-outlined">arrow_outward</span></a></div></article>
+        <article class="project project-blue"><div class="project-art"><span class="art-word">CARE</span><span class="art-index">05</span></div><div class="project-info"><span>Sustainability</span><h3>Value beyond the bottom line</h3><a href="#contact" aria-label="Ask about Value beyond the bottom line"><span class="material-symbols-outlined">arrow_outward</span></a></div></article>
+        <article class="project project-pink"><div class="project-art"><span class="art-word">NEXT</span><span class="art-index">06</span></div><div class="project-info"><span>Strategy</span><h3>A clearer path forward</h3><a href="#contact" aria-label="Ask about A clearer path forward"><span class="material-symbols-outlined">arrow_outward</span></a></div></article>
+      </div>
+    </section>
+    <section class="testimonials shell section-rule" id="testimonials">
+      <div class="section-label"><span>03</span><span>Kind words</span></div>
+      <div class="testimonial-layout"><div><h2>Good work is a <em>conversation.</em></h2><div class="slider-controls"><button id="prev-testimonial" type="button" aria-label="Previous testimonial"><span class="material-symbols-outlined">arrow_back</span></button><button id="next-testimonial" type="button" aria-label="Next testimonial"><span class="material-symbols-outlined">arrow_forward</span></button></div></div><div class="testimonial-window"><div class="testimonial-track" id="testimonial-track"><blockquote><p>“Kettii brings a rare combination of thoughtful questions and dependable follow-through. Every conversation ends with more clarity than it started with.”</p><footer><strong>Dr. M. Chen</strong><span>Academic advisor</span></footer></blockquote><blockquote><p>“The strength of Kettii's work is the care behind it. She sees both the system and the people inside it, which leads to genuinely useful ideas.”</p><footer><strong>Sarah Banda</strong><span>Project collaborator</span></footer></blockquote></div></div></div>
+    </section>
+  </main>
+  <footer class="contact-footer" id="contact"><div class="shell contact-grid"><div><div class="section-label"><span>04</span><span>Get in touch</span></div><h2>Have a good question?<br><em>Let's start there.</em></h2><div class="socials"><a href="mailto:114122120@gms.tcu.edu.tw" aria-label="Email Kettii"><span class="material-symbols-outlined">mail</span></a><a href="https://www.linkedin.com/in/kettie-banda/" target="_blank" rel="noopener" aria-label="LinkedIn: Kettie Banda"><span class="social-text">in</span></a><a href="https://www.instagram.com/kettie.banda/" target="_blank" rel="noopener" aria-label="Instagram: Kettie Banda"><span class="social-text">ig</span></a></div></div><form id="contact-form"><label for="email">Your email</label><div class="email-row"><input id="email" name="email" type="email" placeholder="you@example.com" required><button class="button button-light" type="submit">Say hello <span class="material-symbols-outlined">north_east</span></button></div><p class="form-status" id="form-status" role="status"></p></form></div><div class="shell footer-bottom"><span>© 2026 Kettii</span><span>Built with curiosity</span></div></footer>
+</body>
+</html>
